@@ -3,15 +3,19 @@ set -e
 
 echo "🌱 Fractal Bootstrap Started"
 
-# Load env if present
-if [ -f .fractal.env ]; then
-  source .fractal.env
+# Гліфи як коментарі, змінні — ASCII
+REPO_USER="${REPO_USER:-s0fractal}"     # 🧑‍🔬
+REPO_NAME="${REPO_NAME:-glyph-os-v0}"   # 📦
+REPO_ORIGIN="${REPO_ORIGIN:-$REPO_USER/$REPO_NAME}" # 🧬
+REPO_PATH="${REPO_PATH:-$HOME/.$REPO_NAME}"          # 🌱
+
+# Завантажити .env.🧬 якщо існує
+if [ -f ".env.glyph" ]; then
+  echo "📄 Loading .env.glyph ..."
+  set -o allexport
+  source .env.glyph
+  set +o allexport
 fi
-REPO_USER="${🧑‍🔬:-s0fractal}"
-REPO_NAME="${📦:-glyph-os-v0}"
-REPO_ORIGIN="${🧬:-$REPO_USER/$REPO_NAME}"
-REPO_PATH="${🌱:-$HOME/.s0fractal}"
-REPO_URL="${🌐:-https://github.com/${REPO_ORIGIN}.git}"
 
 echo "🧬 Cloning from $REPO_URL"
 
