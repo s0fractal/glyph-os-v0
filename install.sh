@@ -25,10 +25,10 @@ if ! command -v brew &> /dev/null; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-if [ -f Brewfile ]; then
-  echo "📦 Installing Brewfile deps..."
-  brew bundle --file=Brewfile
-fi
+# if [ -f Brewfile ]; then
+#   echo "📦 Installing Brewfile deps..."
+#   brew bundle --file=Brewfile
+# fi
 
 # Clone/pull repo
 if [ -d "$REPO_PATH/.git" ]; then
