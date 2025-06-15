@@ -7,7 +7,7 @@ echo "🌱 Fractal Bootstrap Started"
 REPO_USER="${REPO_USER:-s0fractal}"     # 🧑‍🔬
 REPO_NAME="${REPO_NAME:-glyph-os-v0}"   # 📦
 REPO_ORIGIN="${REPO_ORIGIN:-$REPO_USER/$REPO_NAME}" # 🧬
-REPO_PATH="${REPO_PATH:-$HOME/.$REPO_NAME}"          # 🌱
+REPO_PATH="${REPO_PATH:-$HOME/.glyph-os-v0}"         # 🌱
 
 # Завантажити .env.🧬 якщо існує
 if [ -f ".env.glyph" ]; then
@@ -36,7 +36,7 @@ if [ -d "$REPO_PATH/.git" ]; then
   cd "$REPO_PATH"
   git pull origin main
 else
-  echo "📥 Cloning repo..."
+  echo "📥 Cloning repo... $REPO_URL $REPO_PATH"
   git clone "$REPO_URL" "$REPO_PATH"
   cd "$REPO_PATH"
 fi
