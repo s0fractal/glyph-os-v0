@@ -10,3 +10,5 @@ brew "tree"
 brew "bat"
 brew "gh"          # GitHub CLI
 brew "supabase/tap/supabase"
+brew "cloudflared"
+# 🧰 Development tool
