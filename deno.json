@@ -3,12 +3,11 @@
         "wmill": "npm:windmill-client@1.481.0"
     },
     "tasks": {
-        "🚀": "deno run -A 🛠️/start.ts",
-
-        "start": "deno run -A 🛠️/start.ts",
+        "🚀": "deno run -A 🔧/start.ts",
+        "start": "deno run -A  🔧/start.ts",
         "🧵": "cloudflared tunnel run glf-mac-agent",
-        "🔧": "deno run -A 🛠️/install.ts",
-        "🔁": "deno run -A 🛠️/sync.ts",
+        "🔧": "deno run -A 🔧/install.ts",
+        "🔁": "deno run -A 🔧/sync.ts",
         "start:tunnel": "bash 🔧/start_tunnel_insiders.sh",
         "supabase": "deno run --allow-run --allow-env --allow-read --allow-write 🔧/init-fractal.ts",
         "add:readme": "bash 🔧/gen_readme_index.sh",
