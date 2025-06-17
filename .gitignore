@@ -12,6 +12,7 @@ wmill-lock.yaml
 # Credentials (якщо є)
 .env
 .env
+credentials.json
 
 # Cache, tmp
 tmp/
